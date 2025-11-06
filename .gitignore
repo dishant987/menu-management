@@ -1,0 +1,49 @@
+
+
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.* 
+!.env.example
+
+# Logs
+logs
+*.log
+logs/*.log
+debug.log
+error.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+
+# Build output
+dist/
+build/
+temp/
+tmp/
+
+# Cache
+.cache/
+.parcel-cache/
+.vite/
+vite-cache/
+eslintcache
+tsbuildinfo
+
+# IDE & editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Local environment and testing tools
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
