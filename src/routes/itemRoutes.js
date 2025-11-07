@@ -9,16 +9,17 @@ import {
   searchItems,
   deleteItem,
 } from "../controllers/itemController.js";
+import { protect } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-router.post("/", createItem);
+router.post("/",protect, createItem);
 router.get("/", getAllItems);
 router.get("/category/:categoryId", getItemsByCategory);
 router.get("/subcategory/:subCategoryId", getItemsBySubCategory);
 router.get("/:id", getItemByIdOrName);
-router.put("/:id", updateItem);
+router.put("/:id",protect, updateItem);
 router.get("/search/:name", searchItems);
-router.delete("/:id", deleteItem);
+router.delete("/:id",protect, deleteItem);
 
 export default router;
