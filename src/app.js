@@ -2,6 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 import connectDB from "./config/db.js";
 
 // Import routes
@@ -15,6 +16,13 @@ dotenv.config();
 const app = express();
 
 // Middlewares
+app.use(
+  cors({
+    origin: "*", // Allow all origins (anyone can access)
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(cookieParser());
