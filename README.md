@@ -14,49 +14,70 @@ The project demonstrates CRUD operations, search, and pagination — tested via 
 
 ## 📁 Project Structure
 
+```
+
 menu-management/
 ├── src/
-│ ├── config/
-│ │ └── db.js
-│ ├── controllers/
-│ │ ├── categoryController.js
-│ │ ├── subCategoryController.js
-│ │ ├── authController.js
-│ │ └── itemController.js
-│ ├── models/
-│ │ ├── Category.js
-│ │ ├── SubCategory.js
-│ │ ├── User.js
-│ │ └── Item.js
-│ ├── routes/
-│ │ ├── categoryRoutes.js
-│ │ ├── subCategoryRoutes.js
-│ │ ├── authRoutes.js
-│ │ └── itemRoutes.js
-│ └── app.js
+│   ├── config/
+│   │   └── db.js
+│   │
+│   ├── controllers/
+│   │   ├── categoryController.js
+│   │   ├── subCategoryController.js
+│   │   ├── authController.js
+│   │   └── itemController.js
+│   │
+│   ├── models/
+│   │   ├── Category.js
+│   │   ├── SubCategory.js
+│   │   ├── User.js
+│   │   └── Item.js
+│   │
+│   ├── routes/
+│   │   ├── categoryRoutes.js
+│   │   ├── subCategoryRoutes.js
+│   │   ├── authRoutes.js
+│   │   └── itemRoutes.js
+│   │
+│   └── app.js
+│
 ├── server.js
 ├── .env
 ├── .env.example
 ├── package.json
-└── readme.md
+└── README.md
 
-Here’s your **one-page `README.md` setup section** — compact, clean, and ready to paste 👇
+```
 
----
+### 🧩 Description
 
-````markdown
+- **config/** → Contains configuration files (e.g., MongoDB connection setup).  
+- **controllers/** → Handles the logic for each route (Category, Subcategory, Item, Auth).  
+- **models/** → Defines MongoDB schemas using Mongoose.  
+- **routes/** → Defines Express routes and connects them with controllers.  
+- **app.js** → Initializes Express app and middleware.  
+- **server.js** → Entry point that starts the server.  
+- **.env** → Environment variables for local setup.  
+- **.env.example** → Example file showing environment variable structure.  
+- **package.json** → Project dependencies and scripts.  
+- **README.md** → Documentation file for project reference.  
+
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the Repository
 
 ```bash
+# Clone the repository
 git clone https://github.com/dishant987/menu-management.git
+
+# Navigate to the project directory
 cd menu-management
+
 ```
-````
 
 ### 2️⃣ Install Dependencies
 
+In the project directory, run:
 ```bash
 npm install
 ```
